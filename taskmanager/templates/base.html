@@ -3,14 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Quick and Healthy Recipes</title>
 </head>
 <body>
-    Hi there
+
+    <header>
+        <!--top nav bar-->
+        <nav class="green lighten-4">
+            <div class="nav-wrapper">
+              <a href="{{ url_for('home') }}" class="brand-logo">Logo</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="">New Recipe</a></li>
+                <li><a href="">Categories</a></li>
+
+
+                
+              </ul>
+            </div>
+          </nav>
+          
+          <!--mobile sidenav-->
+          <ul class="sidenav" id="mobile-demo">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">New Recipe</a></li>
+            <li><a href="">Categories</a></li>
+            
+          </ul>
+
+    </header>
+    
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+    <footer class="page-footer green lighten-4">
+        
+        <div class="footer-copyright">
+          <div class="container">
+          Health is the wealth!!
+          <a class="grey-text text-lighten-4 right" href="https//codeinstitute.net" target="_blank">Healthy living</a>
+          </div>
+        </div>
+      </footer>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.jsw') }}"></script>
 </body>
 </html>
