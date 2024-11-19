@@ -15,4 +15,4 @@ def categories():
 
 @app.route("/add_categories", methods=["GET","POST"])
 def category():
-    return render_template("add_categories.html")
+    return render_template("add_category.html")
